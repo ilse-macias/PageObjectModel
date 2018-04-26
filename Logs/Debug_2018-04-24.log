@@ -1,0 +1,4 @@
+2018-04-24 16:36:54.3961 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-24 16:37:00.6679 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-24 16:37:00.7390 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Email: test@mail.com 
+2018-04-24 16:37:01.1611 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Clicked 

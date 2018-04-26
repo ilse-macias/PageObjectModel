@@ -1,0 +1,7 @@
+2018-04-25 15:55:18.1432 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-25 15:55:24.4781 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-25 15:55:25.1538 - AutomationPracticePOM.SignInPOM.ClickOnForgotYourPassword - INFO}: Clicked! 
+2018-04-25 15:55:25.2525 - AutomationPracticePOM.ForgotPasswordPOM.ForgotYourPassword - INFO}: Email: test@mail.com 
+2018-04-25 15:55:25.6508 - AutomationPracticePOM.ForgotPasswordPOM.ForgotYourPassword - INFO}: Clicked! 
+2018-04-25 15:55:31.7130 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-25 15:55:31.8251 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 

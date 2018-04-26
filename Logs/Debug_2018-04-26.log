@@ -1,0 +1,12 @@
+2018-04-26 09:13:23.5676 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-26 09:13:29.8003 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-26 09:13:29.8834 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Email: automation@mailinator.com 
+2018-04-26 09:13:30.3684 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Clicked 
+2018-04-26 09:13:31.4906 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-26 09:13:31.5957 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
+2018-04-26 09:14:29.0076 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-26 09:14:35.3186 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-26 09:14:35.4097 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Email: automation@mailinator.com 
+2018-04-26 09:14:35.8350 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Clicked 
+2018-04-26 09:14:36.8866 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-26 09:14:36.9917 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
