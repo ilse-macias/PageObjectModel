@@ -29,13 +29,16 @@ namespace AutomationPracticePOM
         public void CreateAccount()
         {
             HomePagePOM homePage = new HomePagePOM(Properties.driver);
-
             SignInPOM signIn = homePage.ClickOnSignIn();
             CreateAnAccountPOM createAccount = signIn.CreateAccount("automation@mailinator.com");
-            createAccount.PersonalInformation("Diego", "Perez", "123456");
-            createAccount.SelectList("2");
 
             Thread.Sleep(Constants.TIME_SECONDS);
+
+            createAccount.PersonalInformation("Diego", "Perez", "123456");
+            createAccount.SelectList("2", "6", "2009");
+
+            Thread.Sleep(Constants.TIME_SECONDS);
+
         }
 
         [Test, Description("Register to the portal")]
