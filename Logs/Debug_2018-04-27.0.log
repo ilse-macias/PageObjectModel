@@ -1,0 +1,26 @@
+2018-04-27 08:25:34.3222 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-27 08:25:41.7699 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-27 08:25:44.0863 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-27 08:25:44.1173 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
+2018-04-27 08:35:30.9148 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-27 08:35:38.1906 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-27 08:35:38.3132 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-27 08:35:38.4043 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
+2018-04-27 08:45:50.0465 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-27 08:45:57.2234 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-27 08:45:57.4105 - AutomationPracticePOM.SignInPOM.AlreadyRegister - INFO}: Email: automation@mailinator.com 
+2018-04-27 08:45:57.4797 - AutomationPracticePOM.SignInPOM.AlreadyRegister - INFO}: Password: 123456 
+2018-04-27 08:45:58.0368 - AutomationPracticePOM.SignInPOM.AlreadyRegister - INFO}: Clicked! 
+2018-04-27 08:46:05.1092 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-27 08:46:05.1423 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
+2018-04-27 08:46:22.8022 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-27 08:46:30.0584 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-27 08:46:30.1699 - AutomationPracticePOM.SignInPOM.AlreadyRegister - INFO}: Email: automation@mailinator.com 
+2018-04-27 08:46:30.2407 - AutomationPracticePOM.SignInPOM.AlreadyRegister - INFO}: Password: 123456 
+2018-04-27 08:46:30.7957 - AutomationPracticePOM.SignInPOM.AlreadyRegister - INFO}: Clicked! 
+2018-04-27 08:46:35.9252 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-27 08:46:35.9710 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
+2018-04-27 08:46:48.3886 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-27 08:46:55.5573 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-27 08:46:55.8180 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-27 08:46:55.8604 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 

@@ -32,7 +32,7 @@ namespace AutomationPracticePOM
             logger.Info($"Email: {email}");
 
             createAnAccountButton.Click();
-            Console.WriteLine("Clicked");
+            Console.WriteLine($"Clicked on {createAnAccountButton}");
             logger.Info("Clicked");
 
             return new CreateAnAccountPOM(driver);

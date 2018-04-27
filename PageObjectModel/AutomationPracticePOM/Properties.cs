@@ -19,5 +19,6 @@ namespace AutomationPracticePOM
     {
         //Auto-Implemented properties.
         public static IWebDriver driver { get; set; }
+      
     }
 }

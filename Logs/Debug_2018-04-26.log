@@ -1,34 +1,28 @@
-2018-04-26 10:18:56.7551 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
-2018-04-26 10:19:02.9462 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
-2018-04-26 10:19:03.0345 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Email: automation@mailinator.com 
-2018-04-26 10:19:03.4632 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Clicked 
-2018-04-26 10:19:04.5315 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
-2018-04-26 10:19:04.6371 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
-2018-04-26 10:21:48.1988 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
-2018-04-26 10:21:54.4495 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
-2018-04-26 10:21:54.5305 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Email: automation@mailinator.com 
-2018-04-26 10:21:55.0908 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Clicked 
-2018-04-26 10:21:56.2299 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
-2018-04-26 10:21:56.3365 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
-2018-04-26 10:22:34.0933 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
-2018-04-26 10:22:40.5158 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
-2018-04-26 10:22:40.5991 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Email: automation@mailinator.com 
-2018-04-26 10:22:40.9810 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Clicked 
-2018-04-26 10:26:20.2176 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
-2018-04-26 10:26:26.3822 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
-2018-04-26 10:26:26.4573 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Email: automation@mailinator.com 
-2018-04-26 10:26:26.9184 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Clicked 
-2018-04-26 10:26:38.4431 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
-2018-04-26 10:26:38.5567 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
-2018-04-26 10:42:26.2402 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
-2018-04-26 10:42:32.9479 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
-2018-04-26 10:42:33.0274 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Email: automation@mailinator.com 
-2018-04-26 10:42:33.5028 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Clicked 
-2018-04-26 10:42:40.3604 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
-2018-04-26 10:42:40.4743 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
-2018-04-26 10:45:29.4639 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
-2018-04-26 10:45:35.7103 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
-2018-04-26 10:45:35.7913 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Email: automation@mailinator.com 
-2018-04-26 10:45:36.2382 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Clicked 
-2018-04-26 10:45:48.7168 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
-2018-04-26 10:45:48.8319 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
+2018-04-26 16:05:58.6635 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-26 16:06:05.8735 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-26 16:06:06.1219 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Email: automation@mailinator.com 
+2018-04-26 16:06:06.1944 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Clicked 
+2018-04-26 16:06:06.1944 - AutomationPracticePOM.UnitTest1.CreateAccount - INFO}: Email: automation@mailinator.com 
+2018-04-26 16:06:18.8759 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-26 16:06:18.9240 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
+2018-04-26 16:55:17.2911 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-26 16:55:24.5079 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-26 16:55:24.6218 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Email: automation@mailinator.com 
+2018-04-26 16:55:24.7148 - AutomationPracticePOM.SignInPOM.CreateAccount - INFO}: Clicked 
+2018-04-26 16:55:24.7188 - AutomationPracticePOM.UnitTest1.CreateAccount - INFO}: Email: automation@mailinator.com 
+2018-04-26 16:55:37.4454 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-26 16:55:37.4774 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
+2018-04-26 16:55:43.6997 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-26 16:55:50.7759 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-26 16:55:51.4511 - AutomationPracticePOM.SignInPOM.ClickOnForgotYourPassword - INFO}: Clicked! 
+2018-04-26 16:55:51.5756 - AutomationPracticePOM.ForgotPasswordPOM.ForgotYourPassword - INFO}: Email: automation@mailinator.com 
+2018-04-26 16:55:52.1644 - AutomationPracticePOM.ForgotPasswordPOM.ForgotYourPassword - INFO}: Clicked! 
+2018-04-26 16:55:59.4797 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-26 16:55:59.5088 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 
+2018-04-26 16:56:05.5456 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-26 16:56:12.6386 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-26 16:56:12.7484 - AutomationPracticePOM.SignInPOM.AlreadyRegister - INFO}: Email: automation@mailinator.com 
+2018-04-26 16:56:12.8405 - AutomationPracticePOM.SignInPOM.AlreadyRegister - INFO}: Password: 123456 
+2018-04-26 16:56:13.5394 - AutomationPracticePOM.SignInPOM.AlreadyRegister - INFO}: Clicked! 
+2018-04-26 16:56:20.8556 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-26 16:56:20.8877 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 

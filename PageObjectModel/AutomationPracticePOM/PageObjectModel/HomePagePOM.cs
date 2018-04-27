@@ -18,6 +18,7 @@ namespace AutomationPracticePOM
 
         //Controllers
         private IWebElement signInLink => driver.FindElement(By.CssSelector("#header>div.nav>div>div>nav>div.header_user_info>a"));
+        private IWebElement contactUsLink => driver.FindElement(By.Id("contact-link"));
 
         //Method
         public SignInPOM ClickOnSignIn()
@@ -30,5 +31,13 @@ namespace AutomationPracticePOM
             return new SignInPOM(driver);
         }
 
+        public ContactUsPOM ClickOnContactUs()
+        {
+            contactUsLink.Click();
+            Thread.Sleep(Constants.TIME_SECONDS);
+            logger.Info($"Clicked {contactUsLink.Text}");
+
+            return new ContactUsPOM(driver);
+        }
     }
 }

@@ -1,0 +1,1 @@
+﻿EMAIL_ADDRESS_FIELD = driver.FindElement(By.Id("email_create"))

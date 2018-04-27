@@ -1,0 +1,7 @@
+2018-04-26 13:03:50.2157 - AutomationPracticePOM.UnitTest1.SetUp - INFO}: URL: http://automationpractice.com/ 
+2018-04-26 13:03:56.6665 - AutomationPracticePOM.HomePagePOM.ClickOnSignIn - INFO}: Clicked! 
+2018-04-26 13:03:57.4760 - AutomationPracticePOM.SignInPOM.ClickOnForgotYourPassword - INFO}: Clicked! 
+2018-04-26 13:03:57.5611 - AutomationPracticePOM.ForgotPasswordPOM.ForgotYourPassword - INFO}: Email: automation@mailinator.com 
+2018-04-26 13:03:57.8784 - AutomationPracticePOM.ForgotPasswordPOM.ForgotYourPassword - INFO}: Clicked! 
+2018-04-26 13:04:04.0586 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Close 
+2018-04-26 13:04:04.1917 - AutomationPracticePOM.UnitTest1.TearDown - INFO}: Quit! 

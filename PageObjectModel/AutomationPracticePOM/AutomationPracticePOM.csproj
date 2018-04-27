@@ -71,7 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="PageObjectModel\ContactUPOMs.cs" />
+    <Compile Include="PageObjectModel\ContactUsPOMs.cs" />
     <Compile Include="PageObjectModel\CreateAnAccountPOM.cs" />
     <Compile Include="PageObjectModel\ForgotPasswordPOM.cs" />
     <Compile Include="PageObjectModel\RegisterPagePOM.cs" />
@@ -79,7 +79,7 @@
     <Compile Include="PageObjectModel\HomePagePOM.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="PageObjectModel\SignInPOM.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="TestCases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -91,11 +91,13 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="Prop\SignInProperties" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="chromedriver.exe" />
     <Content Include="geckodriver.exe" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
