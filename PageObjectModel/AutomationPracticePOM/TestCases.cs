@@ -11,6 +11,8 @@ using OpenQA.Selenium.IE;
 
 namespace AutomationPracticePOM
 {
+    [TestFixture]
+    [Parallelizable]
     public class TestCases : TestBase
     {
         public IWebDriver driver;
@@ -18,8 +20,8 @@ namespace AutomationPracticePOM
         [SetUp]
         public void SetUp()
         {
-            Properties.driver = new ChromeDriver();
-                                    
+            Properties.driver = new FirefoxDriver();
+                                               
             Properties.driver.Manage().Cookies.DeleteAllCookies();
             Properties.driver.Navigate().GoToUrl(Constants.URL);
             logger.Info($"URL: {Constants.URL}");
