@@ -11,22 +11,22 @@ namespace Guru99POM
 {
     public class TestBase
     {
-        public static IWebDriver driver { get; set; }
+        protected IWebDriver driver;
 
         [SetUp]
         public void SetUp()
         {
-            driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(Constants.URL);
-            driver.Manage().Cookies.DeleteAllCookies();
-            driver.Manage().Window.Maximize();
+            Properties.driver = new ChromeDriver();
+            Properties.driver.Manage().Cookies.DeleteAllCookies();
+            Properties.driver.Navigate().GoToUrl(Constants.URL);
+            Properties.driver.Manage().Window.Maximize();
         }
 
         [TearDown]
         public void TearDown()
         {
-            driver.Close();
-            driver.Quit();
+            Properties.driver.Close();
+            Properties.driver.Quit();
         }
     }
 }
