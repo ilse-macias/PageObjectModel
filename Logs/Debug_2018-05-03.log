@@ -1,0 +1,5 @@
+2018-05-03 12:00:04.6003 - Guru99POM.TestBase.SetUp - INFO}: URL: http://live.guru99.com/index.php/ 
+2018-05-03 12:00:05.9040 - Guru99POM.HomePagePOM.HomePageTitle - INFO}: Expected Title: THIS IS DEMO SITE FOR    
+2018-05-03 12:00:06.2927 - Guru99POM.HomePagePOM.HomePageTitle - INFO}: Screenshot captured. 
+2018-05-03 12:00:12.2761 - Guru99POM.MobilePOM.SelectSort - INFO}: Option selected is: OpenQA.Selenium.Support.UI.SelectElement 
+2018-05-03 12:00:17.6191 - Guru99POM.MobilePOM.SelectSort - INFO}: Screenshot captured. 

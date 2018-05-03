@@ -34,16 +34,19 @@ namespace Guru99POM
                 string expectedTitle = "THIS IS DEMO SITE FOR   ";
                 Assert.AreEqual(expectedTitle, actualTitle);
                 Console.WriteLine("Expected Title: " + expectedTitle);
-                
+                logger.Info($"Expected Title: {expectedTitle}");
+
                 Screenshot ss = ((ITakesScreenshot)Properties.driver).GetScreenshot();
                 ss.SaveAsFile(@"C:\Users\Leonime\Desktop\screenshot\img01.png", ScreenshotImageFormat.Png);
 
                 Console.WriteLine("Screenshot captured.");
+                logger.Info("Screenshot captured.");
             }
 
             catch(NoSuchElementException e)
             {
                 Console.WriteLine(e.Message);
+                logger.Info($"{e.Message}");
             }
         }
 

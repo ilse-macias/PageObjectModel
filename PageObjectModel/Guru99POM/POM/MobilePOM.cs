@@ -25,6 +25,7 @@ namespace Guru99POM
             Properties.driver.FindElement(By.CssSelector("#product-collection-image-1"));
        
 
+
         private IList<IWebElement> itemPosition = 
             Properties.driver.FindElements(By.XPath("//li[@class='item last']"));
         private IList<IWebElement> addToCartPosition 
@@ -40,11 +41,14 @@ namespace Guru99POM
             SelectElement sortOption = new SelectElement(selectSort);
             sortOption.SelectByIndex(1);
             Console.WriteLine("Option selected is: " + sortOption);
+            logger.Info($"Option selected is: {sortOption}");
+
             Thread.Sleep(Constants.TIMER_SECONDS);
 
             Screenshot ss = ((ITakesScreenshot)Properties.driver).GetScreenshot();
             ss.SaveAsFile(@"C:\Users\Leonime\Desktop\screenshot\img01.png", ScreenshotImageFormat.Png);
             Console.WriteLine("Screenshot captured.");
+            logger.Info("Screenshot captured.");
         }
 
         /// <summary>
@@ -54,6 +58,7 @@ namespace Guru99POM
         {
             Assert.AreEqual("$100.00", priceMobileProduct.Text);
             Console.WriteLine("The cost of Sony Xperia is: " + priceMobileProduct.Text);
+            logger.Info($"The cost of Sony Xperia is: {priceMobileProduct.Text}");
         }
 
         /// <summary>

@@ -29,16 +29,19 @@ namespace Guru99POM
             {
                 Assert.AreEqual("$100.00", priceMobileProductsDetails);
                 Console.WriteLine("The cost of Sony Xperia (details) is: " + priceMobileProductsDetails);
+                logger.Info($"The cost of Sony Xperia (details) is: {priceMobileProductsDetails}");
                 Thread.Sleep(Constants.TIMER_SECONDS);
 
                 Screenshot ss = ((ITakesScreenshot)Properties.driver).GetScreenshot();
                 ss.SaveAsFile(@"C:\Users\Leonime\Desktop\screenshot\img02.png", ScreenshotImageFormat.Png);
                 Console.WriteLine("Screenshot captured.");
+                logger.Info("Screenshot captured.");
             }
 
             catch (StaleElementReferenceException ex)
             {
                 Console.WriteLine(ex.Message);
+                logger.Info($"{ex.Message}");
             }
         }
 
