@@ -22,9 +22,8 @@ namespace Guru99POM
         private IWebElement priceMobileProduct = 
             Properties.driver.FindElement(By.Id("product-price-1"));
         private IWebElement clickMobileProduct =
-            Properties.driver.FindElement(By.Id("product-collection-image-1"));
-        private IWebElement priceMobileProductsDetails =
-            Properties.driver.FindElement(By.CssSelector("#product-price-1>span"));
+            Properties.driver.FindElement(By.CssSelector("#product-collection-image-1"));
+       
 
         private IList<IWebElement> itemPosition = 
             Properties.driver.FindElements(By.XPath("//li[@class='item last']"));
@@ -55,28 +54,18 @@ namespace Guru99POM
         {
             Assert.AreEqual("$100.00", priceMobileProduct.Text);
             Console.WriteLine("The cost of Sony Xperia is: " + priceMobileProduct.Text);
-            Thread.Sleep(Constants.TIMER_SECONDS);
         }
 
         /// <summary>
-        /// Click on Sony Xperia and read the cost of details.
+        /// Displays "Sony Xperia mobile" details page.
         /// </summary>
-        public void SonyXperiaDetails()
+        public MobileDetailsPOM SeeDetailsOfMobileProduct()
         {
-            try
-            {
-                clickMobileProduct.Click();
-                Thread.Sleep(Constants.TIMER_SECONDS);
-
-                Assert.AreEqual("$100.00", priceMobileProductsDetails.Text);
-                Console.WriteLine("The cost of Sony Xperia (details) is: " + priceMobileProductsDetails.Text);
-                Thread.Sleep(Constants.TIMER_SECONDS);
-            }
-
-            catch (StaleElementReferenceException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            clickMobileProduct.Click();
+            
+            //redirects to Deatails page.
+            return new MobileDetailsPOM(driver);
         }
+
     }
 }

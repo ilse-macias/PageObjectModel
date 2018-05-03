@@ -22,9 +22,10 @@ namespace Guru99POM
         {
             //  MobilePageSortByName();
             HomePagePOM homePage = new HomePagePOM(Properties.driver);
-            MobilePOM mobile = homePage.ClickOnMobileLink();                
+            MobilePOM mobile = homePage.ClickOnMobileLink();
             mobile.CostSonyXperiaMobile();
-            mobile.SonyXperiaDetails();
+            MobileDetailsPOM mobileDetails = mobile.SeeDetailsOfMobileProduct();
+                mobileDetails.SonyXperiaDetails();
         }
     }
 }
