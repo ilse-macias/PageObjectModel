@@ -18,12 +18,13 @@ namespace Guru99POM
         }
 
         [Test, Description("Verify that cost of product in list page and details page are equal.")]
-        public void Cost()
+        public void VerifyCostOfProducts()
         {
+            //  MobilePageSortByName();
             HomePagePOM homePage = new HomePagePOM(Properties.driver);
-            MobilePOM mobile = homePage.ClickOnMobileLink();
-
-
+            MobilePOM mobile = homePage.ClickOnMobileLink();                
+            mobile.CostSonyXperiaMobile();
+            mobile.SonyXperiaDetails();
         }
     }
 }

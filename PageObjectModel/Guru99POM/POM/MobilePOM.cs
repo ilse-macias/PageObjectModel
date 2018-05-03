@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -15,8 +16,20 @@ namespace Guru99POM
         public MobilePOM(IWebDriver Driver) => driver = Driver;
 
         /*Controllers*/
-        private IWebElement selectSort = Properties.driver.FindElement(By.CssSelector("select"));
-        //(By.XPath("//select[@title='Sort By']"));
+        private IWebElement selectSort = 
+            Properties.driver.FindElement(By.CssSelector("select"));
+
+        private IWebElement priceMobileProduct = 
+            Properties.driver.FindElement(By.Id("product-price-1"));
+        private IWebElement clickMobileProduct =
+            Properties.driver.FindElement(By.Id("product-collection-image-1"));
+        private IWebElement priceMobileProductsDetails =
+            Properties.driver.FindElement(By.CssSelector("#product-price-1>span"));
+
+        private IList<IWebElement> itemPosition = 
+            Properties.driver.FindElements(By.XPath("//li[@class='item last']"));
+        private IList<IWebElement> addToCartPosition 
+            = Properties.driver.FindElements(By.XPath("//button[@class='button btn-cart']"));
 
         /*Method*/
         /// <summary>
@@ -35,7 +48,35 @@ namespace Guru99POM
             Console.WriteLine("Screenshot captured.");
         }
 
-        //Read the cost of Sony Xperia mobile.
+        /// <summary>
+        /// Read the cost of Sony Xperia mobile.
+        /// </summary>
+        public void CostSonyXperiaMobile()
+        {
+            Assert.AreEqual("$100.00", priceMobileProduct.Text);
+            Console.WriteLine("The cost of Sony Xperia is: " + priceMobileProduct.Text);
+            Thread.Sleep(Constants.TIMER_SECONDS);
+        }
 
+        /// <summary>
+        /// Click on Sony Xperia and read the cost of details.
+        /// </summary>
+        public void SonyXperiaDetails()
+        {
+            try
+            {
+                clickMobileProduct.Click();
+                Thread.Sleep(Constants.TIMER_SECONDS);
+
+                Assert.AreEqual("$100.00", priceMobileProductsDetails.Text);
+                Console.WriteLine("The cost of Sony Xperia (details) is: " + priceMobileProductsDetails.Text);
+                Thread.Sleep(Constants.TIMER_SECONDS);
+            }
+
+            catch (StaleElementReferenceException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
