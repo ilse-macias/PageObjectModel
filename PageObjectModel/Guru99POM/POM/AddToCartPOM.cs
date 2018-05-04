@@ -21,16 +21,24 @@ namespace Guru99POM
             Properties.driver.FindElement(By.XPath("//*[@title='Update']"));
 
 	    /*Methods*/
+		/// <summary>
+        /// * Type '1000' into text box.
+        /// * Click on "Update" button.
+        /// </summary>
 		public void AddQuantityAndUpdate()
         {
-            //Type '1000' into text box.
             quantityField.Clear();
             quantityField.SendKeys(Convert.ToString(Constants.QTY_SHOPPING_CART));
             updateButton.Click();
             Thread.Sleep(Constants.TIMER_SECONDS);
         }
 
-		public void VerifyErrorMessage()
+        /// <summary>
+        /// * Verify Error Message: "Some of the products cannot be ordered in requested quantity." 
+        /// 
+        /// I added the element into method, because it throws "StaleElementReferenceException" exception. That exception means the element is not newer, it's old; it can't detected.
+        /// </summary>
+        public void VerifyErrorMessage()
         {
 			string errorMessage = 
 				Properties.driver.FindElement(
@@ -43,7 +51,12 @@ namespace Guru99POM
             logger.Info(message);
         }
 
-		public void ClickOnEmptyCart()
+        /// <summary>
+        /// * Click on "Empty Cart" button.
+        /// 
+        /// I added the element into method, because it throws "StaleElementReferenceException" exception. That exception means the element is not newer, it's old; it can't detected.
+        /// </summary>
+        public void ClickOnEmptyCart()
         {
 			IWebElement emptyCartLink =
 			   Properties.driver.FindElement(By.Id("empty_cart_button"));

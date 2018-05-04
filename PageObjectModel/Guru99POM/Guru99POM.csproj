@@ -72,6 +72,8 @@
     <Compile Include="TestCases\TC01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCases\TC02.cs" />
+    <Compile Include="TestCases\TC03.cs" />
+    <Compile Include="TestCases\TC04.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="geckodriver.exe" />
