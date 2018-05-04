@@ -3,10 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Guru99POM
 {
@@ -24,8 +21,7 @@ namespace Guru99POM
         private IWebElement clickMobileProduct =
             Properties.driver.FindElement(By.CssSelector("#product-collection-image-1"));
        
-
-
+        
         private IList<IWebElement> itemPosition = 
             Properties.driver.FindElements(By.XPath("//li[@class='item last']"));
         private IList<IWebElement> addToCartPosition 
@@ -72,5 +68,32 @@ namespace Guru99POM
             return new MobileDetailsPOM(driver);
         }
 
+        /// <summary>
+        /// Click on "ADD TO CART" button for SonyXperia.
+        /// </summary>
+        public AddToCartPOM AddToCartMobile()
+        {
+            int apuntador = 1;
+
+            //Count the position of Sony Xperia.
+            for(int j=0; j<=itemPosition.Count; j++)
+            {
+                if(apuntador == j)
+                {
+                    //Click on "Add to cart" button of Sony Xperia.
+                    for (int i=0; i<=addToCartPosition.Count; i++)
+                    {
+                        if(i == j)
+                        {
+                            addToCartPosition[apuntador].Click();
+                            Console.WriteLine("The mobile selected is: " + addToCartPosition[apuntador]);
+                            logger.Info($"The mobile selected is: {addToCartPosition[apuntador]}");
+                            Thread.Sleep(Constants.TIMER_SECONDS);
+                        }                        
+                    }
+                }                
+            }            
+            return new AddToCartPOM(driver);
+        }
     }
 }

@@ -36,11 +36,8 @@ namespace Guru99POM
                 Console.WriteLine("Expected Title: " + expectedTitle);
                 logger.Info($"Expected Title: {expectedTitle}");
 
-                Screenshot ss = ((ITakesScreenshot)Properties.driver).GetScreenshot();
-                ss.SaveAsFile(@"C:\Users\Leonime\Desktop\screenshot\img01.png", ScreenshotImageFormat.Png);
-
-                Console.WriteLine("Screenshot captured.");
-                logger.Info("Screenshot captured.");
+                TakeAScreen takeScreen = new TakeAScreen();
+                takeScreen.SaveScreenshot("img_01");
             }
 
             catch(NoSuchElementException e)
@@ -53,7 +50,7 @@ namespace Guru99POM
         public MobilePOM ClickOnMobileLink()
         {
             mobileLink.Click();
-            Thread.Sleep(Constants.TIMER_SECONDS);
+            //Thread.Sleep(Constants.TIMER_SECONDS);
 
             //Re-directs to the page.
             return new MobilePOM(driver);

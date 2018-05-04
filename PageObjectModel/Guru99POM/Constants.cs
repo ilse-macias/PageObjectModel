@@ -14,5 +14,7 @@ namespace Guru99POM
         public const string TV = "TV";
         
         public const int TIMER_SECONDS = 5000;
+
+        public const int QTY_SHOPPING_CART = 1000;
     }
 }

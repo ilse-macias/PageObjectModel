@@ -5,9 +5,9 @@ using System.Threading;
 
 namespace Guru99POM
 {
-    public class TestCase : TestBase
+    public class TC01 : TestBase
     {     
-        [Test, Description("Verify item in Mobile List page can be sorted by 'Name'.")]
+        [Test, Description("1. Verify item in Mobile List page can be sorted by 'Name'.")]
         public void MobilePageSortByName()
         {
             HomePagePOM homePage = new HomePagePOM(Properties.driver);
@@ -17,7 +17,7 @@ namespace Guru99POM
             mobile.SelectSort();
         }
 
-        [Test, Description("Verify that cost of product in list page and details page are equal.")]
+        [Test, Description("2. Verify that cost of product in list page and details page are equal.")]
         public void VerifyCostOfProducts()
         {
             //  MobilePageSortByName();
@@ -28,6 +28,20 @@ namespace Guru99POM
 
             MobileDetailsPOM mobileDetails = mobile.SeeDetailsOfMobileProduct();
             mobileDetails.SonyXperiaDetails();
+        }
+
+        [Test, Description("3. Verify that you can't add more product in cart than the product available in store.")]
+        public void ErrorVerification()
+        {
+            HomePagePOM homePage = new HomePagePOM(driver);
+
+            MobilePOM mobile = homePage.ClickOnMobileLink();
+
+            AddToCartPOM cart = mobile.AddToCartMobile();
+            cart.AddQuantityAndUpdate();
+            cart.VerifyErrorMessage();
+
+            cart.ClickOnEmptyCart();
         }
     }
 }
