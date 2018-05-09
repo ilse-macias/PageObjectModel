@@ -12,7 +12,8 @@ namespace Guru99POM.TestCases
             MobilePOM mobile = homePage.ClickOnMobileLink();
 
             AddToCartPOM cart = mobile.AddToCartMobile();
-            cart.AddQuantityAndUpdate();
+            cart.AddQuantity();
+            cart.ClickOnUpdateButton();
             cart.VerifyErrorMessage();
 
             cart.ClickOnEmptyCart();

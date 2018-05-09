@@ -22,13 +22,20 @@ namespace Guru99POM
 
 	    /*Methods*/
 		/// <summary>
+        /// * Clear the field.
         /// * Type '1000' into text box.
-        /// * Click on "Update" button.
         /// </summary>
-		public void AddQuantityAndUpdate()
+		public void AddQuantity()
         {
             quantityField.Clear();
             quantityField.SendKeys(Convert.ToString(Constants.QTY_SHOPPING_CART));
+        }
+
+        /// <summary>
+        /// * Click on "Update" button.
+        /// </summary>
+        public void ClickOnUpdateButton()
+        {
             updateButton.Click();
             Thread.Sleep(Constants.TIMER_SECONDS);
         }

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Guru99POM.TestCases
+namespace Guru99POM
 {
     class TC04 : TestBase
     {
@@ -10,7 +10,10 @@ namespace Guru99POM.TestCases
             HomePagePOM homePage = new HomePagePOM(driver);
 
             MobilePOM mobile = homePage.ClickOnMobileLink();
-    
+
+            AddToComparePOM addToCompare = mobile.CompareProducts();
+            addToCompare.CompareButton();
+            addToCompare.PopUpWindows();
         }
     }
 }

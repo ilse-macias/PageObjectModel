@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="POM\AddToComparePOM.cs" />
     <Compile Include="POM\HomePagePOM.cs" />
     <Compile Include="POM\MobileDetailsPOM.cs" />
     <Compile Include="POM\MobilePOM.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="TestCases\TC04.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="chromedriver.exe" />
     <Content Include="geckodriver.exe" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
