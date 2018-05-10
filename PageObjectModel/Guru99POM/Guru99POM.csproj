@@ -62,19 +62,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants.cs" />
+    <Compile Include="Constants\AccountConst.cs" />
+    <Compile Include="Constants\Constants.cs" />
     <Compile Include="POM\AddToComparePOM.cs" />
+    <Compile Include="POM\CreateAnAccountPOM.cs" />
     <Compile Include="POM\HomePagePOM.cs" />
+    <Compile Include="POM\MenuPOM.cs" />
     <Compile Include="POM\MobileDetailsPOM.cs" />
     <Compile Include="POM\MobilePOM.cs" />
+    <Compile Include="POM\AccountSubOptionsPOM.cs" />
+    <Compile Include="POM\MyAccountPOM.cs" />
+    <Compile Include="POM\MyDashboardPOM.cs" />
+    <Compile Include="POM\TelevisionPOM.cs" />
     <Compile Include="Properties.cs" />
-    <Compile Include="TakeAScreen.cs" />
-    <Compile Include="TestBase.cs" />
+    <Compile Include="TakeScreenshot.cs" />
+    <Compile Include="TestCases\TestBase.cs" />
     <Compile Include="TestCases\TC01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCases\TC02.cs" />
     <Compile Include="TestCases\TC03.cs" />
     <Compile Include="TestCases\TC04.cs" />
+    <Compile Include="TestCases\TC05.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="chromedriver.exe" />

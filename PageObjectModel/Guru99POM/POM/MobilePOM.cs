@@ -43,7 +43,7 @@ namespace Guru99POM
 
             Thread.Sleep(Constants.TIMER_SECONDS);
 
-            TakeAScreen screen = new TakeAScreen();
+            TakeScreenshot screen = new TakeScreenshot();
             screen.SaveScreenshot("img_001");
         }
 
@@ -103,35 +103,42 @@ namespace Guru99POM
         /// </summary>
         public AddToComparePOM CompareProducts()
         {
-            int productOne = 1;
-            int productTwo = 0;
+            int productOne = 0;
+            int productTwo = 1;
 
             for (int i = 0; i <= itemPosition.Count; i++)
             {
-                //Product #1 and Product #2.
-                if (i == productOne || productTwo == i)
+                //Product #1.
+                if (i == productOne)
                 {
-                    // Click on the product
                     for (int j = 0; j <= addToCompareLink.Count; j++)
                     {
+                        // Click on the product
                         if (j == productOne)
                         {
                             addToCompareLink[productOne].Click();
                             Thread.Sleep(Constants.TIMER_SECONDS);
+
                             Console.WriteLine("Product One: " + addToCompareLink[productOne].ToString());
                             logger.Info($"Product One: {addToCompareLink[productOne].ToString()}");
                         }
+                    }
+                }
 
+                if(i == productTwo)
+                {
+                    for (int j = 0; j <= addToCompareLink.Count; j++)
+                    {
                         if (j == productTwo)
                         {
                             addToCompareLink[productTwo].Click();
-                            Thread.Sleep(Constants.TIMER_SECONDS);
+                            //Thread.Sleep(Constants.TIMER_SECONDS);
 
                             Console.WriteLine("Product Two: " + addToCompareLink[productTwo].ToString());
                             logger.Info($"Product Two: {addToCompareLink[productTwo].ToString()}");
                         }
                     }
-                }
+                }                      
             }
             return new AddToComparePOM(driver);
         }

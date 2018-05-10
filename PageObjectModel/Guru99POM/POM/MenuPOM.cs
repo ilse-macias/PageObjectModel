@@ -1,0 +1,61 @@
+﻿using OpenQA.Selenium;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Guru99POM
+{
+    public class MenuPOM : TestBase
+    {
+        /*Constructor*/
+        public MenuPOM(IWebDriver Driver) => driver = Driver;
+
+        /*Controllers*/
+        private IWebElement myAccountOption =
+            Properties.driver.FindElement(By.LinkText(Constants.ACCOUNT));
+        private IWebElement tvLink =
+            Properties.driver.FindElement(By.LinkText(Constants.TV));
+        
+        /*Methods*/
+        /// <summary>
+        /// Account > My Account.
+        /// "My Account" Sub-option menu.
+        /// </summary>
+        public AccountSubOptions ClickOnAccountOption()
+        {
+            myAccountOption.Click();
+            Thread.Sleep(Constants.TIMER_SECONDS);
+
+            Console.WriteLine("Button clicked!");
+            logger.Info("Button clicked");
+
+            return new AccountSubOptions(driver);
+        }
+        
+        /// <summary>
+        /// Account option menu.
+        /// </summary>
+        public MyAccountPOM ClickOnMyAccount()
+        {
+            myAccountOption.Click();
+            Console.WriteLine("Button clicked!");
+            logger.Info("Button clicked");
+
+            return new MyAccountPOM(driver);
+        }
+
+        /// <summary>
+        /// "Television" option menu.
+        /// </summary>
+        public TelevisionPOM ClickOnTvLink()
+        {
+            tvLink.Click();
+            Thread.Sleep(Constants.TIMER_SECONDS);
+
+            return new TelevisionPOM(driver);
+        }
+    }
+}

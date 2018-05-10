@@ -81,7 +81,7 @@ namespace Guru99POM
                 Console.WriteLine(message);
                 logger.Info(message);
 
-                TakeAScreen screenShot = new TakeAScreen();
+                TakeScreenshot screenShot = new TakeScreenshot();
                 screenShot.SaveScreenshot("img_02");
             }
 

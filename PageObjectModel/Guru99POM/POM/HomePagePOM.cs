@@ -20,6 +20,9 @@ namespace Guru99POM
         
         private string actualTitle = Properties.driver.FindElement(By.CssSelector("h2")).Text;
 
+        private IWebElement accountOption = 
+            Properties.driver.FindElement(By.LinkText(Constants.ACCOUNT));
+        
         /*Methods*/
         /// <summary>
         /// Scenario: Verify title of the page.
@@ -36,7 +39,7 @@ namespace Guru99POM
                 Console.WriteLine("Expected Title: " + expectedTitle);
                 logger.Info($"Expected Title: {expectedTitle}");
 
-                TakeAScreen takeScreen = new TakeAScreen();
+                TakeScreenshot takeScreen = new TakeScreenshot();
                 takeScreen.SaveScreenshot("img_01");
             }
 
@@ -56,10 +59,20 @@ namespace Guru99POM
             return new MobilePOM(driver);
         }
 
-        public void ClickOnTvLink()
-        {
-            tvLink.Click();
-            Thread.Sleep(Constants.TIMER_SECONDS);
-        }
+        //public TelevisionPOM ClickOnTvLink()
+        //{
+        //    tvLink.Click();
+        //    Thread.Sleep(Constants.TIMER_SECONDS);
+
+        //    return new TelevisionPOM(driver);
+        //}
+
+        //public MyAccountOptionsMenuPOM ClickOnAccountOption()
+        //{
+        //    accountOption.Click();
+        //    Thread.Sleep(Constants.TIMER_SECONDS);
+
+        //    return new MyAccountOptionsMenuPOM(driver);
+        //}
     }
 }

@@ -32,7 +32,7 @@ namespace Guru99POM
                 logger.Info($"The cost of Sony Xperia (details) is: {priceMobileProductsDetails}");
                 Thread.Sleep(Constants.TIMER_SECONDS);
 
-                Screenshot ss = ((ITakesScreenshot)Properties.driver).GetScreenshot();
+                OpenQA.Selenium.Screenshot ss = ((ITakesScreenshot)Properties.driver).GetScreenshot();
                 ss.SaveAsFile(@"C:\Users\Leonime\Desktop\screenshot\img02.png", ScreenshotImageFormat.Png);
                 Console.WriteLine("Screenshot captured.");
                 logger.Info("Screenshot captured.");

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Guru99POM
 {
-    class TakeAScreen : TestBase
+    class TakeScreenshot : TestBase
     {
         public void SaveScreenshot(string testCaseName)
         {
