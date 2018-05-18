@@ -16,17 +16,16 @@ namespace Guru99POM
             AccountSubOptions accountSubOptions = menu.ClickOnAccountOption();
             MyAccountPOM myAccount = accountSubOptions.ClickOnMyAccount();
 
-            //CreateAnAccountPOM createAccount = myAccount.CreateAnAccount();
-            //createAccount.FillTheFields("ABC", "DEF", "abcd@de.com", "123456");
-            //MyDashboardPOM myDashboard = createAccount.ClickOnRegisterButton();
-            //myDashboard.VerifyRegistrationIsDone();
+            CreateAnAccountPOM createAccount = myAccount.CreateAnAccount();
+            createAccount.FillTheFields(Information.FIRST_NAME, Information.LAST_NAME, Information.EMAIL_REGISTER, Information.PASSWORD_REGISTER);
+            MyDashboardPOM myDashboard = createAccount.ClickOnRegisterButton();
+            myDashboard.VerifyRegistrationIsDone();
 
-            MyDashboardPOM myDashboard = myAccount.LoginAccount("abcd@de.com", "123456");
+           // MyDashboardPOM myDashboard = myAccount.LoginAccount(Information.EMAIL, Information.PASSWORD);
             TelevisionPOM television =  myDashboard.ClickOnTvLink(); //try with MenuPOM
             MyWishlistPOM myWishlist = television.AddToWishList();
             ShareWishlistPOM shareWishlists = myWishlist.ClickOnShareWishlist();
-            shareWishlists.ShareWishlist("test@mail.com", "Hello world!");
-
+            shareWishlists.ShareWishlist(Information.EMAIL_LOGIN, "Hello world!");
         }
     }
 }

@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Constants\AccountConst.cs" />
     <Compile Include="Constants\Constants.cs" />
+    <Compile Include="Constants\Information.cs" />
     <Compile Include="POM\AddToComparePOM.cs" />
     <Compile Include="POM\CreateAnAccountPOM.cs" />
     <Compile Include="POM\HomePagePOM.cs" />

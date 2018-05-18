@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Guru99POM
 {
-    class AccountConst
+    public class AccountConst
     {
         public const string MY_ACCOUNT = "My Account";
         public const string MY_WISHLIST = "My Wishlist";

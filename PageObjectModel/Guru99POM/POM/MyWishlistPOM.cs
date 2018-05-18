@@ -10,22 +10,26 @@ namespace Guru99POM
         public MyWishlistPOM(IWebDriver Driver) => driver = Driver;
 
         /*Controller*/
-       // private IWebElement shareWishlistButton =
-           //Properties.driver.FindElement(By.ClassName("button btn-share"));
-            // Properties.driver.FindElement(By.XPath("//button[@name='save_and_share']"));
+        private IWebElement shareWishlistButton =
+            Properties.driver.FindElement(By.XPath("//button[@name='save_and_share']"));
+        //Properties.driver.FindElement(By.ClassName("button btn-share"));
+
+        TakeScreenshot screen = new TakeScreenshot();
 
         /*Method*/
         public ShareWishlistPOM ClickOnShareWishlist()
         {
-            IWebElement shareWishlistButton =
-                Properties.driver.FindElement(By.XPath("//button[@class='button btn-share']"));
+            //IWebElement shareWishlistButton =
+            //    Properties.driver.FindElement(By.XPath("//button[@class='button btn-share']"));
 
             Console.WriteLine("clicked on ShareList");
 
             try
             {
-                shareWishlistButton.Submit();
+                shareWishlistButton.Click();
                 //Thread.Sleep(Constants.TIMER_SECONDS);
+
+                screen.SaveScreenshot("img001");
 
                 Console.WriteLine("Share Wishlist button has been clicked.");
                 logger.Info("Share Wishlist button has been clicked.");

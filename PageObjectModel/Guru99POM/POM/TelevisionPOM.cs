@@ -18,30 +18,38 @@ namespace Guru99POM
         /*Methods*/
         public MyWishlistPOM AddToWishList()
         {
-            int position = 1;
-            System.Console.WriteLine("Clickeo en add wish");
-            //Count the position of Item.
-            for(int i = 0; i<= itemPosition.Count; i++)
+            try
             {
-                //Si la posicion es igual al contador del if
-                if(i == position)
+                int position = 1;
+                System.Console.WriteLine("Clickeo en add wish");
+                //Count the position of Item.
+                for(int i = 0; i<= itemPosition.Count; i++)
                 {
-                    //Count the position of Link.
-                    for (int j = 0; j <= addToWishlistLink.Count; j++)
+                    //Si la posicion es igual al contador del if
+                    if(i == position)
                     {
-                        if(j == position)
+                        //Count the position of Link.
+                        for (int j = 0; j <= addToWishlistLink.Count; j++)
                         {
-                            addToWishlistLink[position].Click();
-                            System.Console.WriteLine("hello");
-                            //System.Console.WriteLine("Position: " + addToWishlistLink[position].Text);
-                            //logger.Info($"Position: {addToWishlistLink[position].Text}");
-                        }
-                    }                    
+                            if(j == position)
+                            {
+                                addToWishlistLink[position].Click();
+                                System.Console.WriteLine("Position: " + addToWishlistLink[position].Text);
+                                logger.Info($"Position: {addToWishlistLink[position].Text}");
+                            }
+                        }                    
+                    }
                 }
             }
-           
+
+            catch (StaleElementReferenceException ex)
+            {
+                System.Console.WriteLine(ex.Message);
+                logger.Info(ex.Message);
+            }
+
             //redirecciona a la pantalla de MyWishList
-            return new MyWishlistPOM(driver);
+            return new MyWishlistPOM(Properties.driver);
         }
     }
 }
