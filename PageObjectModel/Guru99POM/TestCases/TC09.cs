@@ -16,7 +16,8 @@ namespace Guru99POM
 
             MobilePOM mobile = homePage.ClickOnMobileLink();
             AddToCartPOM shoppingCart = mobile.AddToCartMobile();
-            shoppingCart.TypeDiscountCodes("GURU50");
+            shoppingCart.ApplyDiscountCodes("GURU50");
+            shoppingCart.VerifyDiscount();
         }
     }
 }

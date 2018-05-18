@@ -25,12 +25,14 @@ namespace Guru99POM
         private IWebElement applyLink =
             Properties.driver.FindElement(By.XPath("//button[@title='Apply']"));
 
-	    /*Methods*/
-		/// <summary>
+        TakeScreenshot screen = new TakeScreenshot();
+
+        /*Methods*/
+        /// <summary>
         /// * Clear the field.
         /// * Type '1000' into text box.
         /// </summary>
-		public void AddQuantity()
+        public void AddQuantity()
         {
             quantityField.Clear();
             quantityField.SendKeys(Convert.ToString(Constants.QTY_SHOPPING_CART));
@@ -96,18 +98,33 @@ namespace Guru99POM
             }            
         }
 
-        public void TypeDiscountCodes(string code)
+        /// <summary>
+        /// Apply Discount Code:
+        /// Code: GURU50
+        /// </summary>
+        public void ApplyDiscountCodes(string code)
         {
-        //    string message = "Coupon code \"GURU50\" was applied.";
-        //    IWebElement messageCoupon = driver.FindElement(By.ClassName("success-msg"));
-
             couponCode.SendKeys(code);
             Thread.Sleep(Constants.TIMER_SECONDS);
 
             applyLink.Click();
+        }
 
-        //    Assert.AreEqual(message, messageCoupon.Text);
-            Console.WriteLine("pint");
+        /// <summary>
+        /// Verify the discount generated.
+        /// </summary>
+        public void VerifyDiscount()
+        {
+            string message = "Coupon code \"GURU50\" was applied.";
+
+            string messageCoupon =
+                Properties.driver.FindElement(By.ClassName("success-msg")).Text;
+            
+            Assert.AreEqual(message, messageCoupon);
+            Console.WriteLine(message);
+
+            screen.SaveScreenshot("coupon_02");
+            Thread.Sleep(Constants.TIMER_SECONDS);
         }
     }
 }
