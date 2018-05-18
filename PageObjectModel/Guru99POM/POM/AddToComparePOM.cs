@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Guru99POM
 {
-    class AddToComparePOM : TestBase 
+    public class AddToComparePOM : TestBase 
     {
         /*Constructor*/
         public AddToComparePOM(IWebDriver Driver) => driver = Driver;

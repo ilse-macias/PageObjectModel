@@ -1,16 +1,14 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Guru99POM
 {
-    public class ShareWishlistPOM
+    public class ShareWishlistPOM : TestBase
     {
-        /**/
+        /*Constructor*/
+        public ShareWishlistPOM(IWebDriver Driver) => driver = Driver;
+        
+        /*Controllers*/
         private IWebElement emailAddressField =
             Properties.driver.FindElement(By.Id("email_address"));
         private IWebElement messageField =
@@ -20,8 +18,11 @@ namespace Guru99POM
 
         TakeScreenshot screen = new TakeScreenshot();
 
+        /*Methods*/
         public void ShareWishlist(string email, string message)
         {
+          //  Thread.Sleep(Constants.TIMER_SECONDS);
+
             //Message: Your Wishlist has been shared.
             emailAddressField.SendKeys(email);
             Thread.Sleep(Constants.TIMER_SECONDS);
@@ -30,9 +31,9 @@ namespace Guru99POM
             Thread.Sleep(Constants.TIMER_SECONDS);
 
             shareWishlistButton.Click();
+            Thread.Sleep(Constants.TIMER_SECONDS);
 
             screen.SaveScreenshot("img_001");
-            
         }
     }
 }

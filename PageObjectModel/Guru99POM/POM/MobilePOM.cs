@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace Guru99POM
 {
-    class MobilePOM : TestBase
+    public class MobilePOM : TestBase
     {
         /*Constructor*/
         public MobilePOM(IWebDriver Driver) => driver = Driver;

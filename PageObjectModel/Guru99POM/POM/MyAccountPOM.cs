@@ -13,6 +13,13 @@ namespace Guru99POM
         private IWebElement createAnAccountButton =
             Properties.driver.FindElement(By.XPath("//a[@title='Create an Account']"));
 
+        private IWebElement emailAddressField =
+            Properties.driver.FindElement(By.Id("email"));
+        private IWebElement passwordField =
+            Properties.driver.FindElement(By.Id("pass"));
+        private IWebElement loginButton =
+            Properties.driver.FindElement(By.Id("send2"));
+
         TakeScreenshot saveScreen = new TakeScreenshot();
 
         /*Method*/
@@ -31,6 +38,25 @@ namespace Guru99POM
             logger.Info("Screenshot captured.");
 
             return new CreateAnAccountPOM(driver);
+        }
+
+        /// <summary>
+        /// Login with the credentials
+        /// It'll redirect to "My Dashboard" Page.
+        /// </summary>
+        
+        public MyDashboardPOM LoginAccount(string email, string password)
+        {
+            emailAddressField.SendKeys(email);
+            Thread.Sleep(Constants.TIMER_SECONDS);
+
+            passwordField.SendKeys(password);
+            Thread.Sleep(Constants.TIMER_SECONDS);
+
+            loginButton.Click();
+            Console.WriteLine("Login button has been clicked");
+
+            return new MyDashboardPOM(driver);
         }
     }
 }

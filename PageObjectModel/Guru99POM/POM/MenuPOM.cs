@@ -16,9 +16,10 @@ namespace Guru99POM
         /*Controllers*/
         private IWebElement myAccountOption =
             Properties.driver.FindElement(By.LinkText(Constants.ACCOUNT));
-        private IWebElement tvLink =
-            Properties.driver.FindElement(By.LinkText(Constants.TV));
-        
+        //private IWebElement tvLink =
+        //    Properties.driver.FindElement(By.LinkText(Constants.TV));
+            //  Properties.driver.FindElement(By.XPath("//li[@class='level0 nav - 2 last']"));
+
         /*Methods*/
         /// <summary>
         /// Account > My Account.
@@ -47,15 +48,26 @@ namespace Guru99POM
             return new MyAccountPOM(driver);
         }
 
-        /// <summary>
-        /// "Television" option menu.
-        /// </summary>
-        public TelevisionPOM ClickOnTvLink()
-        {
-            tvLink.Click();
-            Thread.Sleep(Constants.TIMER_SECONDS);
+        ///// <summary>
+        ///// "Television" option menu.
+        ///// </summary>
+        //public TelevisionPOM ClickOnTvLink()
+        //{
+        //    IWebElement tvLink =
+        //        Properties.driver.FindElement(By.LinkText(Constants.TV));
 
-            return new TelevisionPOM(driver);
-        }
+        //    try
+        //    {
+        //        tvLink.Submit();
+        //        Console.WriteLine("TV link clicked.");
+        //    }
+
+        //    catch (NoSuchElementException ex)
+        //    {
+        //        Console.WriteLine(ex.Message);
+        //    }
+
+        //    return new TelevisionPOM(driver);
+        //}
     }
 }

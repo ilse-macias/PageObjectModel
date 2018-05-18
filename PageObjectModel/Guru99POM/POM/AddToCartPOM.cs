@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Guru99POM
 {
-    class AddToCartPOM : TestBase
+    public class AddToCartPOM : TestBase
     {
         /*Constructor*/
         public AddToCartPOM(IWebDriver Driver) => driver = Driver;
@@ -19,6 +19,11 @@ namespace Guru99POM
             Properties.driver.FindElement(By.XPath("//input[@class='input-text qty']"));
         private IWebElement updateButton =
             Properties.driver.FindElement(By.XPath("//*[@title='Update']"));
+
+        private IWebElement couponCode =
+            Properties.driver.FindElement(By.Id("coupon_code"));
+        private IWebElement applyLink =
+            Properties.driver.FindElement(By.XPath("//button[@title='Apply']"));
 
 	    /*Methods*/
 		/// <summary>
@@ -89,6 +94,20 @@ namespace Guru99POM
             {
                 Console.WriteLine(ex.Message);
             }            
+        }
+
+        public void TypeDiscountCodes(string code)
+        {
+        //    string message = "Coupon code \"GURU50\" was applied.";
+        //    IWebElement messageCoupon = driver.FindElement(By.ClassName("success-msg"));
+
+            couponCode.SendKeys(code);
+            Thread.Sleep(Constants.TIMER_SECONDS);
+
+            applyLink.Click();
+
+        //    Assert.AreEqual(message, messageCoupon.Text);
+            Console.WriteLine("pint");
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Guru99POM
 {
@@ -18,7 +19,7 @@ namespace Guru99POM
         public MyWishlistPOM AddToWishList()
         {
             int position = 1;
-
+            System.Console.WriteLine("Clickeo en add wish");
             //Count the position of Item.
             for(int i = 0; i<= itemPosition.Count; i++)
             {
@@ -28,12 +29,19 @@ namespace Guru99POM
                     //Count the position of Link.
                     for (int j = 0; j <= addToWishlistLink.Count; j++)
                     {
-                        addToWishlistLink[position].Click();
+                        if(j == position)
+                        {
+                            addToWishlistLink[position].Click();
+                            System.Console.WriteLine("hello");
+                            //System.Console.WriteLine("Position: " + addToWishlistLink[position].Text);
+                            //logger.Info($"Position: {addToWishlistLink[position].Text}");
+                        }
                     }                    
                 }
             }
+           
             //redirecciona a la pantalla de MyWishList
-            return new MyWishlistPOM();
+            return new MyWishlistPOM(driver);
         }
     }
 }

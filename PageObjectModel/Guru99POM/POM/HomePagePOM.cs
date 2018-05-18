@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Guru99POM
 {
-    class HomePagePOM : TestBase
+    public class HomePagePOM : TestBase
     {
         /*Constructor*/
         public HomePagePOM(IWebDriver Driver) => driver = Driver;
