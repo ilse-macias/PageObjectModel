@@ -66,6 +66,7 @@
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="Constants\Information.cs" />
     <Compile Include="POM\AddToComparePOM.cs" />
+    <Compile Include="POM\CheckoutPOM.cs" />
     <Compile Include="POM\CreateAnAccountPOM.cs" />
     <Compile Include="POM\HomePagePOM.cs" />
     <Compile Include="POM\MenuPOM.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="POM\TelevisionPOM.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="TakeScreenshot.cs" />
+    <Compile Include="TestCases\TC06.cs" />
     <Compile Include="TestCases\TC09.cs" />
     <Compile Include="TestCases\TestBase.cs" />
     <Compile Include="TestCases\TC01.cs" />
@@ -98,7 +100,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <Compile Include="POM\AddToCartPOM.cs" />
+    <Compile Include="POM\AddToCart.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

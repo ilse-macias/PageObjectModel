@@ -16,8 +16,6 @@ namespace Guru99POM
         public AddToComparePOM(IWebDriver Driver) => driver = Driver;
 
         /*Controllers*/
-
-
         private IWebElement compareButton =
             Properties.driver.FindElement(By.XPath("//button[@title='Compare']"));
 

@@ -14,11 +14,14 @@ namespace Guru99POM
         public MenuPOM(IWebDriver Driver) => driver = Driver;
 
         /*Controllers*/
-        private IWebElement myAccountOption =
+        private IWebElement AccountLink =>
             Properties.driver.FindElement(By.LinkText(Constants.ACCOUNT));
-        //private IWebElement tvLink =
-        //    Properties.driver.FindElement(By.LinkText(Constants.TV));
-            //  Properties.driver.FindElement(By.XPath("//li[@class='level0 nav - 2 last']"));
+
+        private IWebElement mobileLink =>
+            Properties.driver.FindElement(By.LinkText(Constants.MOBILE));
+        private IWebElement tvLink =>
+            Properties.driver.FindElement(By.LinkText(Constants.TV));
+        //  Properties.driver.FindElement(By.XPath("//li[@class='level0 nav - 2 last']"));
 
         /*Methods*/
         /// <summary>
@@ -27,26 +30,34 @@ namespace Guru99POM
         /// </summary>
         public AccountSubOptions ClickOnAccountOption()
         {
-            myAccountOption.Click();
-            Thread.Sleep(Constants.TIMER_SECONDS);
+            AccountLink.Click();
+          //  Thread.Sleep(Constants.TIMER_SECONDS);
 
             Console.WriteLine("Button clicked!");
             logger.Info("Button clicked");
 
             return new AccountSubOptions(driver);
         }
-        
+
+        public MobilePOM ClickOnMobileLink()
+        {
+            mobileLink.Click();
+
+            //Re-directs to the page.
+            return new MobilePOM(driver);
+        }
+
         /// <summary>
         /// Account option menu.
         /// </summary>
-        public MyAccountPOM ClickOnMyAccount()
-        {
-            myAccountOption.Click();
-            Console.WriteLine("Button clicked!");
-            logger.Info("Button clicked");
+        //public MyAccountPOM ClickOnMyAccount()
+        //{
+        //    myAccountOption.Click();
+        //    Console.WriteLine("Button clicked!");
+        //    logger.Info("Button clicked");
 
-            return new MyAccountPOM(driver);
-        }
+        //    return new MyAccountPOM(driver);
+        //}
 
         ///// <summary>
         ///// "Television" option menu.

@@ -25,6 +25,11 @@ namespace Guru99POM
         private IWebElement applyLink =
             Properties.driver.FindElement(By.XPath("//button[@title='Apply']"));
 
+
+        private IWebElement proceedToCheckOutButton =
+            Properties.driver.FindElement(By.XPath("//li[@class='method-checkout-cart-methods-onepage-bottom']"));
+
+
         TakeScreenshot screen = new TakeScreenshot();
 
         /*Methods*/
@@ -119,12 +124,21 @@ namespace Guru99POM
 
             string messageCoupon =
                 Properties.driver.FindElement(By.ClassName("success-msg")).Text;
-            
+
             Assert.AreEqual(message, messageCoupon);
             Console.WriteLine(message);
 
             screen.SaveScreenshot("coupon_02");
             Thread.Sleep(Constants.TIMER_SECONDS);
+        }
+
+        ///
+        public CheckoutPOM ClickOnProceedToCheckOutButton()
+        {
+            proceedToCheckOutButton.Click();
+            screen.SaveScreenshot("checkout");
+
+            return new CheckoutPOM(driver);
         }
     }
 }

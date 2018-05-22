@@ -51,5 +51,10 @@ namespace Guru99POM
             //redirecciona a la pantalla de MyWishList
             return new MyWishlistPOM(Properties.driver);
         }
+
+        public AddToCartPOM addProduct()
+        {
+            return new AddToCartPOM(driver);
+        }
     }
 }
