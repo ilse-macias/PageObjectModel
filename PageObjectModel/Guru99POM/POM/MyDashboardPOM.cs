@@ -11,10 +11,13 @@ namespace Guru99POM
         public MyDashboardPOM(IWebDriver Driver) => driver = Driver;
 
         /*Controllers*/
-        private IWebElement dashboardTitle =
+        private IWebElement dashboardTitle =>
             Properties.driver.FindElement(By.ClassName("page-title"));
-        private IWebElement tvLink =
+        private IWebElement tvLink =>
            Properties.driver.FindElement(By.LinkText(Constants.TV));
+
+        private IWebElement myOrders =>
+            Properties.driver.FindElement(By.LinkText(DashboardMenu.MY_ORDERS));
 
         TakeScreenshot screenshot = new TakeScreenshot();
 
@@ -72,6 +75,13 @@ namespace Guru99POM
             }
 
             return new TelevisionPOM(driver);
+        }
+
+        public MyOrdersPOM ClickOnMyOrders()
+        {
+            myOrders.Click();
+
+            return new MyOrdersPOM(driver);
         }
     }
 }

@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Constants\AccountConst.cs" />
     <Compile Include="Constants\Constants.cs" />
+    <Compile Include="Constants\DashboardMenu.cs" />
     <Compile Include="Constants\Information.cs" />
     <Compile Include="POM\AddToComparePOM.cs" />
     <Compile Include="POM\CheckoutPOM.cs" />
@@ -75,12 +76,15 @@
     <Compile Include="POM\AccountSubOptionsPOM.cs" />
     <Compile Include="POM\MyAccountPOM.cs" />
     <Compile Include="POM\MyDashboardPOM.cs" />
+    <Compile Include="POM\MyOrdersPOM.cs" />
     <Compile Include="POM\MyWishlistPOM.cs" />
+    <Compile Include="POM\OrderInformationPOM.cs" />
     <Compile Include="POM\ShareWishlistPOM.cs" />
     <Compile Include="POM\TelevisionPOM.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="TakeScreenshot.cs" />
     <Compile Include="TestCases\TC06.cs" />
+    <Compile Include="TestCases\TC07.cs" />
     <Compile Include="TestCases\TC09.cs" />
     <Compile Include="TestCases\TestBase.cs" />
     <Compile Include="TestCases\TC01.cs" />

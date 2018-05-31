@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Guru99POM
 {
-    class Constants
+    public class Constants
     {
         public const string URL = "http://live.guru99.com/index.php/";
 

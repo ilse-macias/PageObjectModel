@@ -23,7 +23,8 @@ namespace Guru99POM.TestCases
             checkout.BillingInformationCheckout(Information.ADDRESS, Information.CITY, Information.ZIP, Information.TELEPHONE);
             checkout.SelectList(Information.STATE);
             checkout.BillingInformationButton();
-            checkout.ShippingMethodCheckout();
+            checkout.ShippingMethodButton();
+            checkout.PaymentInformationMethod();
         }
        
     }

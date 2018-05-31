@@ -28,8 +28,9 @@ namespace Guru99POM
             Properties.driver.FindElement(By.Id("billing:country_id"));
         private IWebElement telephoneField =>
             Properties.driver.FindElement(By.Id("billing:telephone"));
-        private IWebElement continueButton =>
+        private IWebElement billingContinueButton =>
             Properties.driver.FindElement(By.XPath("//button[@title='Continue']"));
+              
 
         TakeScreenshot screenshot = new TakeScreenshot();
 
@@ -45,39 +46,47 @@ namespace Guru99POM
             //SelectElement countryDropDownList = new SelectElement(countryField);
             //countryDropDownList.SelectByText("United States");
         }
-        
+
         public void BillingInformationCheckout(string address, string city, int zip, int telephone)
         {
-            addressField.Clear();
-            addressField.SendKeys(address);
-            Thread.Sleep(Constants.TIMER_SECONDS);
+            try
+            {
+                addressField.Clear();
+                addressField.SendKeys(address);
+                Thread.Sleep(Constants.TIMER_SECONDS);
 
-            cityField.Clear();
-            cityField.SendKeys(city);
-            Thread.Sleep(Constants.TIMER_SECONDS);
+                cityField.Clear();
+                cityField.SendKeys(city);
+                Thread.Sleep(Constants.TIMER_SECONDS);
 
-            zipField.Clear();
-            zipField.SendKeys(Convert.ToString(zip));
-            Thread.Sleep(Constants.TIMER_SECONDS);
+                zipField.Clear();
+                zipField.SendKeys(Convert.ToString(zip));
+                Thread.Sleep(Constants.TIMER_SECONDS);
 
-            telephoneField.Clear();
-            telephoneField.SendKeys(Convert.ToString(telephone));
-            Thread.Sleep(Constants.TIMER_SECONDS);
+                telephoneField.Clear();
+                telephoneField.SendKeys(Convert.ToString(telephone));
+                Thread.Sleep(Constants.TIMER_SECONDS);
+            }
+
+            catch (InvalidElementStateException ex)
+            {
+                Console.WriteLine(ex.Message);
+                logger.Info(ex.Message);
+            }
 
             screenshot.SaveScreenshot("billing_info");
         }
 
         public void BillingInformationButton()
         {
-            continueButton.Click();
+            billingContinueButton.Click();
             Console.WriteLine("Billing Information has been completed.");
             logger.Info("Billing Information has been completed.");
         }
 
-        public void ShippingMethodCheckout()
+        public void CompareFlatRate()
         {
-            IWebElement shippingMethodButton =
-                Properties.driver.FindElement(By.XPath("//button[@class='button validation-passed']"));
+
 
             string flatRateElement =
                 Properties.driver.FindElement(By.CssSelector("#checkout-shipping-method-load>dl>dd>ul>li>label>span"))
@@ -89,8 +98,40 @@ namespace Guru99POM
             logger.Info($"Flat Rate: {flatRate}");
 
             screenshot.SaveScreenshot("shipping_method");
+        }
+
+        public void ShippingMethodButton()
+        {
+            IWebElement shippingMethodButton =
+                Properties.driver.FindElement(By.XPath("//button[@class='button validation-passed']"));
 
             shippingMethodButton.Click();
+           // Thread.Sleep(10000);
+            Console.WriteLine("Shipping Method button has been clicked!");
+
+            screenshot.SaveScreenshot("shipping_method");
+        }
+
+        public void PaymentInformationMethod()
+        {
+            IWebElement checkMoneyOrderRadioButton =
+                Properties.driver.FindElement(By.XPath("//dt/label[@for='p_method_checkmo']"));
+            IWebElement paymentContinueButton =
+                Properties.driver.FindElement(By.XPath("//*[@id='shipping-buttons-container']/button"));
+
+            checkMoneyOrderRadioButton.Click();
+            Thread.Sleep(Constants.TIMER_SECONDS);
+            Console.WriteLine("Radio button: " + checkMoneyOrderRadioButton.Text);
+
+            paymentContinueButton.Click();
+        }
+
+        public void OrderReview()
+        {
+            IWebElement placeOrderButton =
+                Properties.driver.FindElement(By.XPath("//button[@class='button btn-checkout']"));
+
+
         }
     }
 }
