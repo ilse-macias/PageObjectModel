@@ -86,6 +86,7 @@
     <Compile Include="TestCases\TC06.cs" />
     <Compile Include="TestCases\TC07.cs" />
     <Compile Include="TestCases\TC09.cs" />
+    <Compile Include="TestCases\TC08.cs" />
     <Compile Include="TestCases\TestBase.cs" />
     <Compile Include="TestCases\TC01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

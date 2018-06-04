@@ -17,6 +17,9 @@ namespace Guru99POM
         private IWebElement viewOrderLink =>
             Properties.driver.FindElement(By.LinkText("VIEW ORDER"));
 
+        private IWebElement reorderLink =>
+            Properties.driver.FindElement(By.LinkText("REORDER"));
+
         TakeScreenshot screenshot = new TakeScreenshot();
 
         /*Methods*/
@@ -27,6 +30,15 @@ namespace Guru99POM
             Thread.Sleep(Constants.TIMER_SECONDS);
 
             return new OrderInformationPOM(driver);
+        }
+
+        public AddToCartPOM ClickOnReorder()
+        {
+            reorderLink.Click();
+            screenshot.SaveScreenshot("TC_08");
+            Thread.Sleep(Constants.TIMER_SECONDS);
+
+            return new AddToCartPOM(driver);
         }
     }
 }

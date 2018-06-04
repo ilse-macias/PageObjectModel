@@ -50,6 +50,9 @@ namespace Guru99POM
         {
             updateButton.Click();
             Thread.Sleep(Constants.TIMER_SECONDS);
+
+            Console.WriteLine("Update button has been clicked.");
+            logger.Info("Update button has been clicked.");
         }
 
         /// <summary>
@@ -139,6 +142,32 @@ namespace Guru99POM
             screen.SaveScreenshot("checkout");
 
             return new CheckoutPOM(driver);
+        }
+
+        public void EditQuantity(int quantity)
+        {
+            IWebElement editQuantity = 
+                Properties.driver.FindElement(By.XPath("//input[@class='input-text qty']"));
+
+            editQuantity.Clear();
+            editQuantity.Click();
+            editQuantity.SendKeys(Convert.ToString(quantity));
+            Thread.Sleep(Constants.TIMER_SECONDS);
+
+            Console.WriteLine("User has edited the quantity");
+            logger.Info("User has edited the quantity.");
+        }
+
+        public void ClickOnUpdateButtonQuantity()
+        {
+            IWebElement updateButton = 
+                Properties.driver.FindElement(By.XPath("//button[@class='button btn-update']"));
+
+            updateButton.Click();
+            Thread.Sleep(Constants.TIMER_SECONDS);
+
+            Console.WriteLine("Update button has been clicked.");
+            logger.Info("Update button has been clicked.");
         }
     }
 }
