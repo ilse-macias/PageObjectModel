@@ -86,8 +86,6 @@ namespace Guru99POM
 
         public void CompareFlatRate()
         {
-
-
             string flatRateElement =
                 Properties.driver.FindElement(By.CssSelector("#checkout-shipping-method-load>dl>dd>ul>li>label>span"))
                 .Text;
@@ -115,7 +113,7 @@ namespace Guru99POM
         public void PaymentInformationMethod()
         {
             IWebElement checkMoneyOrderRadioButton =
-                Properties.driver.FindElement(By.XPath("//dt/label[@for='p_method_checkmo']"));
+                Properties.driver.FindElement(By.Id("dt_method_checkmo"));
             IWebElement paymentContinueButton =
                 Properties.driver.FindElement(By.XPath("//*[@id='shipping-buttons-container']/button"));
 
@@ -131,7 +129,7 @@ namespace Guru99POM
             IWebElement placeOrderButton =
                 Properties.driver.FindElement(By.XPath("//button[@class='button btn-checkout']"));
 
-
+            placeOrderButton.Click();
         }
     }
 }

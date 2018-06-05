@@ -1,9 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Guru99POM
 {
@@ -22,8 +17,11 @@ namespace Guru99POM
             shoppingCart.ClickOnUpdateButton();
             CheckoutWithFillsPOM checkout = shoppingCart.ClickOnProceedToCheckoutButtonFill();
             checkout.ClickOnBillingButton();
-            //checkout.ClickOnBillingButton();
-            //checkout.ClickOnShippingInfo();
+            checkout.ClickOnShippingInfo();
+            checkout.ClickOnShippingMethod();
+            checkout.ClickOnPaymentInformation();
+            checkout.ClickOnPlaceOrderButton();
+
         }
     }
 }
