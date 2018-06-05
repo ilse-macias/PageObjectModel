@@ -20,7 +20,10 @@ namespace Guru99POM
             AddToCartPOM shoppingCart = myOrders.ClickOnReorder();
             shoppingCart.EditQuantity(10);
             shoppingCart.ClickOnUpdateButton();
-            CheckoutPOM checkout = shoppingCart.ClickOnProceedToCheckOutButton();
+            CheckoutWithFillsPOM checkout = shoppingCart.ClickOnProceedToCheckoutButtonFill();
+            checkout.ClickOnBillingButton();
+            //checkout.ClickOnBillingButton();
+            //checkout.ClickOnShippingInfo();
         }
     }
 }
