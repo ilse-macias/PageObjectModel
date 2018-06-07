@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Guru99POM.TestCases
+namespace Guru99POM
 {
     class TC03 : TestBase
     {

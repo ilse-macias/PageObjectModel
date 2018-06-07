@@ -5,9 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Guru99POM.TestCases
+namespace Guru99POM
 {
-    
     public class TC06 : TestBase
     {
         [Test, Description("Verify user is able to purchase product using registered email id.")]

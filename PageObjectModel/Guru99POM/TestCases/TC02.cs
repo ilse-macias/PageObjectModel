@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 
-namespace Guru99POM.TestCases
+namespace Guru99POM
 {
-    class TC02 : TestBase
+    public class TC02 : TestBase
     {
         [Test, Description("2. Verify that cost of product in list page and details page are equal.")]
         public void VerifyCostOfProducts()

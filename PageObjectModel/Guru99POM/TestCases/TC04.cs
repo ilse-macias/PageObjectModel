@@ -2,7 +2,7 @@
 
 namespace Guru99POM
 {
-    class TC04 : TestBase
+    public class TC04 : TestBase
     {
         [Test, Description("4. Verify that you are able to compare two products.")]
         public void CompareTwoProducts()
